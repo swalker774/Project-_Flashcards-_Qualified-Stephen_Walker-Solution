@@ -56,7 +56,7 @@ function Deck({updateDecks}) {
                             <Link to={`/decks/${id}/edit`} className="btn btn-secondary"><i className="fa fa-edit" aria-hidden="true"></i> Edit</Link>
                             <Link to={`/decks/${id}/study`} className="btn btn-primary ml-3"><i className="fa fa-bookmark" aria-hidden="true"></i> Study</Link>
                             <Link to={`/decks/${id}/cards/new`} className="btn btn-primary ml-3"><i className="fa fa-plus" aria-hidden="true"></i> Add Cards</Link>
-                            <button onClick={deleteHandler} name="delete" value={id} className="btn btn-danger ml-auto"><i className="fa fa-trash" aria-hidden="true"></i></button>
+                            <button onClick={deleteHandler} name="delete" value={id} className="btn btn-danger ml-auto">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ function Deck({updateDecks}) {
                                         } else {
                                             history.go(0);
                                         } 
-                                    }} name="deleteCard" value={card.id} className="btn btn-danger ml-3"><i className="fa fa-trash" aria-hidden="true"></i></button>
+                                    }} name="deleteCard" value={card.id} className="btn btn-danger ml-3">Delete</button>
                                 </div>
                             </div>
                         </div>

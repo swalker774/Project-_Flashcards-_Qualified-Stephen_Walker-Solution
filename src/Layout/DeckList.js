@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { deleteDeck } from './index.js'
+import { deleteDeck } from '../utils/api/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DeckList({deck, updateDecks}) {
     const { id, name, description, cards } = deck;
@@ -28,7 +29,7 @@ function DeckList({deck, updateDecks}) {
                 <div className="row px-3">
                     <Link to={`/decks/${id}`} className="btn btn-secondary"><i className="fa fa-eye" aria-hidden="true"></i> View</Link>
                     <Link to={`/decks/${id}/study`} className="btn btn-primary ml-3"><i className="fa fa-bookmark" aria-hidden="true"></i> Study</Link>
-                    <button onClick={deleteHandler} name="delete" value={id} className="btn btn-danger ml-auto"><i className="fa fa-trash" aria-hidden="true"></i></button>
+                    <button onClick={deleteHandler} name="delete" value={id} className="btn btn-danger ml-auto">Delete</button>
                 </div>
             </div>
         </div>
