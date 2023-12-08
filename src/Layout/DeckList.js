@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { deleteDeck } from '../utils/api/index';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DeckList({deck, updateDecks}) {
     const { id, name, description, cards } = deck;
